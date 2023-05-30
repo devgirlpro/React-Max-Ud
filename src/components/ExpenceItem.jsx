@@ -1,17 +1,17 @@
 import React from "react";
 import "./ExpenceItem.css";
+import ExpenceDate from "./ExpenceDate";
 
 function ExpenceItem(props) {
-/*     const ExpenceDate = props.ExpenceDate;
-    const expenceTitle = props.expenceTitle;
-    const ExpenceAmount = props.ExpenceAmount; */
+
 
     return (
         <div className="expense-item">
-            <div>{props.ExpenceDate}</div>
+            <ExpenceDate date={props.date}/>
+          
             <div className="expense-item__description">
-                <h2>{props.expenceTitle}</h2>
-                <div className="expense-item__price">{props.ExpenceAmount}</div>
+                <h2>{props.title}</h2>
+                <div className="expense-item__price">{props.amount}</div>
             </div>
         </div>
     );
