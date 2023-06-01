@@ -3,28 +3,28 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 import Card from "../UI/Card";
 
-function Expenses() {
+const Expenses = (props) => {
     return (
         <Card className="expenses">
             <ExpenseItem
-                date={new Date(2021, 5, 12)}
-                title="Car Insurance"
-                amount={234.45}
+                title={props.items[0].title}
+                amount={props.items[0].amount}
+                date={props.items[0].date}
             />
             <ExpenseItem
-                date={new Date(2021, 9, 19)}
-                title="Home Insurance"
-                amount={120567}
+                title={props.items[1].title}
+                amount={props.items[1].amount}
+                date={props.items[1].date}
             />
             <ExpenseItem
-                date={new Date(2020, 12, 12)}
-                title="Health Insurance"
-                amount={345.67}
+                title={props.items[2].title}
+                amount={props.items[2].amount}
+                date={props.items[2].date}
             />
             <ExpenseItem
-                date={new Date(2020, 4, 20)}
-                title="Car Insurance"
-                amount={678.78}
+                title={props.items[3].title}
+                amount={props.items[3].amount}
+                date={props.items[3].date}
             />
         </Card>
     );
